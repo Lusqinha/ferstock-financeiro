@@ -4,6 +4,29 @@
  */
 package com.ferstock.sys.ferstock;
 
+import java.awt.CardLayout;
+import java.awt.Color;
+import java.awt.Cursor;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.GridLayout;
+import java.awt.Insets;
+import java.awt.Rectangle;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.beans.Beans;
+import java.io.IOException;
+import javax.swing.BorderFactory;
+import javax.swing.BoxLayout;
+import javax.swing.GroupLayout;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.LayoutStyle;
+import javax.swing.SwingConstants;
+import javax.swing.WindowConstants;
+
 /**
  *
  * @author lucas
@@ -26,93 +49,86 @@ public class MainScreen extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panelSideMenu = new javax.swing.JPanel();
-        btnSideHome = new javax.swing.JButton();
-        btnSideAdd = new javax.swing.JButton();
-        btnSideRemove = new javax.swing.JButton();
-        btnSideConfig = new javax.swing.JButton();
-        panelMainContent = new javax.swing.JPanel();
-        topDisplay = new javax.swing.JPanel();
-        labelTitle = new javax.swing.JLabel();
-        labelBalance = new javax.swing.JLabel();
-        panelHome = new javax.swing.JPanel();
-        panelScreenMenus = new javax.swing.JPanel();
-        btnMovimentacao = new javax.swing.JButton();
-        btnRelatorio = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        panelSideMenu = new JPanel();
+        btnSideHome = new JButton();
+        btnSideAdd = new JButton();
+        btnSideRemove = new JButton();
+        btnSideConfig = new JButton();
+        panelMainContent = new JPanel();
+        topDisplay = new JPanel();
+        labelTitle = new JLabel();
+        labelBalance = new JLabel();
+        panelHome = new JPanel();
+        panelScreenMenus = new JPanel();
+        btnMovimentacao = new JButton();
+        btnRelatorio = new JButton();
+        btnConfig = new JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(0, 12, 26));
-        setBounds(new java.awt.Rectangle(0, 0, 0, 0));
-        setMaximumSize(new java.awt.Dimension(1920, 1080));
-        setMinimumSize(new java.awt.Dimension(1280, 720));
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Ferstock - Financeiro");
+        setBackground(new Color(0, 12, 26));
+        setBounds(new Rectangle(0, 0, 0, 0));
+        setMaximumSize(new Dimension(3000, 3000));
+        setMinimumSize(new Dimension(1280, 720));
         setName("MainFrame"); // NOI18N
-        setPreferredSize(new java.awt.Dimension(1280, 720));
-        setSize(new java.awt.Dimension(1280, 720));
-        getContentPane().setLayout(new javax.swing.BoxLayout(getContentPane(), javax.swing.BoxLayout.LINE_AXIS));
+        setPreferredSize(new Dimension(1280, 720));
+        setSize(new Dimension(1280, 720));
+        getContentPane().setLayout(new BoxLayout(getContentPane(), BoxLayout.LINE_AXIS));
 
-        panelSideMenu.setBackground(new java.awt.Color(214, 128, 0));
-        panelSideMenu.setBorder(javax.swing.BorderFactory.createEmptyBorder(12, 5, 12, 5));
-        panelSideMenu.setMaximumSize(new java.awt.Dimension(80, 2147483647));
-        panelSideMenu.setMinimumSize(new java.awt.Dimension(62, 542));
-        panelSideMenu.setPreferredSize(new java.awt.Dimension(62, 561));
-        panelSideMenu.setLayout(new java.awt.GridLayout(4, 2, 0, 150));
+        panelSideMenu.setBackground(new Color(214, 128, 0));
+        panelSideMenu.setBorder(BorderFactory.createEmptyBorder(12, 5, 12, 5));
+        panelSideMenu.setMaximumSize(new Dimension(80, 2147483647));
+        panelSideMenu.setMinimumSize(new Dimension(62, 542));
+        panelSideMenu.setPreferredSize(new Dimension(62, 561));
+        panelSideMenu.setLayout(new GridLayout(4, 2, 0, 150));
 
-        btnSideHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/30x30/home.png"))); // NOI18N
         btnSideHome.setToolTipText("Início");
         btnSideHome.setAlignmentX(0.5F);
-        btnSideHome.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        btnSideHome.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
         btnSideHome.setBorderPainted(false);
         btnSideHome.setContentAreaFilled(false);
-        btnSideHome.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        btnSideHome.setMaximumSize(new java.awt.Dimension(32, 32));
-        btnSideHome.setMinimumSize(new java.awt.Dimension(32, 32));
-        btnSideHome.setPreferredSize(new java.awt.Dimension(32, 32));
+        btnSideHome.setFocusable(false);
+        btnSideHome.setMargin(new Insets(0, 0, 0, 0));
         panelSideMenu.add(btnSideHome);
 
-        btnSideAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/30x30/movimentacao.png"))); // NOI18N
         btnSideAdd.setToolTipText("Movimentação");
         btnSideAdd.setAlignmentX(0.5F);
         btnSideAdd.setBorderPainted(false);
         btnSideAdd.setContentAreaFilled(false);
-        btnSideAdd.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnSideAdd.setFocusPainted(false);
+        btnSideAdd.setFocusable(false);
+        btnSideAdd.setHorizontalTextPosition(SwingConstants.CENTER);
         btnSideAdd.setIconTextGap(5);
-        btnSideAdd.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        btnSideAdd.setMaximumSize(new java.awt.Dimension(32, 32));
-        btnSideAdd.setMinimumSize(new java.awt.Dimension(32, 32));
-        btnSideAdd.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnSideAdd.setMargin(new Insets(0, 0, 0, 0));
+        btnSideAdd.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 btnSideAddActionPerformed(evt);
             }
         });
         panelSideMenu.add(btnSideAdd);
 
-        btnSideRemove.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/30x30/relatorio.png"))); // NOI18N
-        btnSideRemove.setText("");
         btnSideRemove.setToolTipText("Relatório");
         btnSideRemove.setBorderPainted(false);
         btnSideRemove.setContentAreaFilled(false);
-        btnSideRemove.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        btnSideRemove.setMaximumSize(new java.awt.Dimension(32, 32));
-        btnSideRemove.setMinimumSize(new java.awt.Dimension(32, 32));
-        btnSideRemove.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnSideRemove.setFocusable(false);
+        btnSideRemove.setMargin(new Insets(0, 0, 0, 0));
+        btnSideRemove.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 btnSideRemoveActionPerformed(evt);
             }
         });
         panelSideMenu.add(btnSideRemove);
 
-        btnSideConfig.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/30x30/config.png"))); // NOI18N
-        btnSideConfig.setText("");
         btnSideConfig.setToolTipText("Configurações");
         btnSideConfig.setBorderPainted(false);
         btnSideConfig.setContentAreaFilled(false);
-        btnSideConfig.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btnSideConfig.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        btnSideConfig.setMaximumSize(new java.awt.Dimension(32, 32));
-        btnSideConfig.setMinimumSize(new java.awt.Dimension(32, 32));
-        btnSideConfig.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnSideConfig.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+        btnSideConfig.setFocusable(false);
+        btnSideConfig.setMargin(new Insets(0, 0, 0, 0));
+        btnSideConfig.setMaximumSize(new Dimension(32, 32));
+        btnSideConfig.setMinimumSize(new Dimension(32, 32));
+        btnSideConfig.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 btnSideConfigActionPerformed(evt);
             }
         });
@@ -120,45 +136,42 @@ public class MainScreen extends javax.swing.JFrame {
 
         getContentPane().add(panelSideMenu);
 
-        panelMainContent.setLayout(new javax.swing.BoxLayout(panelMainContent, javax.swing.BoxLayout.PAGE_AXIS));
+        panelMainContent.setLayout(new BoxLayout(panelMainContent, BoxLayout.PAGE_AXIS));
 
-        topDisplay.setBackground(new java.awt.Color(45, 47, 48));
-        topDisplay.setMaximumSize(new java.awt.Dimension(32767, 55));
-        topDisplay.setMinimumSize(new java.awt.Dimension(0, 55));
-        topDisplay.setPreferredSize(new java.awt.Dimension(1126, 55));
+        topDisplay.setBackground(new Color(45, 47, 48));
+        topDisplay.setMaximumSize(new Dimension(32767, 55));
+        topDisplay.setMinimumSize(new Dimension(0, 55));
+        topDisplay.setPreferredSize(new Dimension(1126, 55));
 
-        labelTitle.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        labelTitle.setForeground(new java.awt.Color(255, 255, 255));
+        labelTitle.setFont(new Font("Segoe UI", 1, 18)); // NOI18N
+        labelTitle.setForeground(new Color(255, 255, 255));
         labelTitle.setText("Ferstock - Gerenciamento de Caixa");
 
-        labelBalance.setFont(new java.awt.Font("Gadugi", 1, 28)); // NOI18N
-        labelBalance.setForeground(new java.awt.Color(10, 129, 10));
-        labelBalance.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        labelBalance.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/30x30/dinheiro.png"))); // NOI18N
+        labelBalance.setFont(new Font("Gadugi", 1, 28)); // NOI18N
+        labelBalance.setForeground(new Color(10, 129, 10));
+        labelBalance.setHorizontalAlignment(SwingConstants.RIGHT);
         labelBalance.setText("957,62");
         labelBalance.setToolTipText("Saldo atual");
-        labelBalance.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        labelBalance.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        labelBalance.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+        labelBalance.setHorizontalTextPosition(SwingConstants.RIGHT);
         labelBalance.setIconTextGap(15);
 
-        javax.swing.GroupLayout topDisplayLayout = new javax.swing.GroupLayout(topDisplay);
+        GroupLayout topDisplayLayout = new GroupLayout(topDisplay);
         topDisplay.setLayout(topDisplayLayout);
-        topDisplayLayout.setHorizontalGroup(
-            topDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        topDisplayLayout.setHorizontalGroup(topDisplayLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
             .addGroup(topDisplayLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(labelTitle)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 500, Short.MAX_VALUE)
-                .addComponent(labelBalance, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(labelBalance, GroupLayout.PREFERRED_SIZE, 279, GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28))
         );
-        topDisplayLayout.setVerticalGroup(
-            topDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        topDisplayLayout.setVerticalGroup(topDisplayLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
             .addGroup(topDisplayLayout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addComponent(labelTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, topDisplayLayout.createSequentialGroup()
+                .addComponent(labelTitle, GroupLayout.PREFERRED_SIZE, 17, GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(GroupLayout.Alignment.TRAILING, topDisplayLayout.createSequentialGroup()
                 .addContainerGap(11, Short.MAX_VALUE)
                 .addComponent(labelBalance)
                 .addContainerGap())
@@ -166,60 +179,63 @@ public class MainScreen extends javax.swing.JFrame {
 
         panelMainContent.add(topDisplay);
 
-        panelHome.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        panelHome.setMinimumSize(new java.awt.Dimension(0, 32));
-        panelHome.setLayout(new java.awt.CardLayout(300, 200));
+        panelHome.setBackground(new Color(58, 60, 62));
+        panelHome.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        panelHome.setMinimumSize(new Dimension(0, 32));
+        panelHome.setPreferredSize(new Dimension(1280, 720));
+        panelHome.setLayout(new CardLayout(300, 200));
 
-        panelScreenMenus.setBorder(javax.swing.BorderFactory.createEmptyBorder(50, 50, 50, 50));
-        panelScreenMenus.setMaximumSize(new java.awt.Dimension(800, 600));
+        panelScreenMenus.setBorder(BorderFactory.createEmptyBorder(50, 50, 50, 50));
+        panelScreenMenus.setMaximumSize(new Dimension(800, 600));
         panelScreenMenus.setOpaque(false);
-        panelScreenMenus.setPreferredSize(new java.awt.Dimension(1000, 600));
-        panelScreenMenus.setLayout(new java.awt.GridLayout(1, 3, 20, 0));
+        panelScreenMenus.setPreferredSize(new Dimension(1000, 600));
+        panelScreenMenus.setLayout(new GridLayout(1, 3, 20, 0));
 
-        btnMovimentacao.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        btnMovimentacao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/movimentacao.png"))); // NOI18N
+        btnMovimentacao.setFont(new Font("Segoe UI", 0, 18)); // NOI18N
         btnMovimentacao.setText("Movimentação");
         btnMovimentacao.setToolTipText("Gerencia a entrada e saída de valores");
         btnMovimentacao.setContentAreaFilled(false);
-        btnMovimentacao.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnMovimentacao.setMaximumSize(new java.awt.Dimension(45, 45));
-        btnMovimentacao.setPreferredSize(new java.awt.Dimension(45, 45));
-        btnMovimentacao.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnMovimentacao.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+        btnMovimentacao.setFocusable(false);
+        btnMovimentacao.setHorizontalTextPosition(SwingConstants.CENTER);
+        btnMovimentacao.setMaximumSize(new Dimension(45, 45));
+        btnMovimentacao.setPreferredSize(new Dimension(45, 45));
+        btnMovimentacao.setVerticalTextPosition(SwingConstants.BOTTOM);
         panelScreenMenus.add(btnMovimentacao);
 
-        btnRelatorio.setBackground(new java.awt.Color(149, 0, 110));
-        btnRelatorio.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        btnRelatorio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/relatorio.png"))); // NOI18N
+        btnRelatorio.setBackground(new Color(149, 0, 110));
+        btnRelatorio.setFont(new Font("Segoe UI", 0, 18)); // NOI18N
         btnRelatorio.setText("Relatório");
         btnRelatorio.setToolTipText("Emite documentos referente à movimentação financeira");
-        btnRelatorio.setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        btnRelatorio.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         btnRelatorio.setBorderPainted(false);
         btnRelatorio.setContentAreaFilled(false);
+        btnRelatorio.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
         btnRelatorio.setFocusPainted(false);
         btnRelatorio.setFocusable(false);
-        btnRelatorio.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnRelatorio.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        btnRelatorio.setMaximumSize(new java.awt.Dimension(40, 40));
-        btnRelatorio.setPreferredSize(new java.awt.Dimension(40, 40));
-        btnRelatorio.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnRelatorio.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnRelatorio.setHorizontalTextPosition(SwingConstants.CENTER);
+        btnRelatorio.setMargin(new Insets(0, 0, 0, 0));
+        btnRelatorio.setMaximumSize(new Dimension(40, 40));
+        btnRelatorio.setPreferredSize(new Dimension(40, 40));
+        btnRelatorio.setVerticalTextPosition(SwingConstants.BOTTOM);
+        btnRelatorio.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 btnRelatorioActionPerformed(evt);
             }
         });
         panelScreenMenus.add(btnRelatorio);
 
-        jButton3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/config.png"))); // NOI18N
-        jButton3.setText("Configurações");
-        jButton3.setToolTipText("Altera as definições de funcionamento e gerenciamento do programa");
-        jButton3.setContentAreaFilled(false);
-        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton3.setMaximumSize(new java.awt.Dimension(50, 50));
-        jButton3.setMinimumSize(new java.awt.Dimension(50, 50));
-        jButton3.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        panelScreenMenus.add(jButton3);
+        btnConfig.setFont(new Font("Segoe UI", 0, 18)); // NOI18N
+        btnConfig.setText("Configurações");
+        btnConfig.setToolTipText("Altera as definições de funcionamento e gerenciamento do programa");
+        btnConfig.setContentAreaFilled(false);
+        btnConfig.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+        btnConfig.setFocusable(false);
+        btnConfig.setHorizontalTextPosition(SwingConstants.CENTER);
+        btnConfig.setMaximumSize(new Dimension(50, 50));
+        btnConfig.setMinimumSize(new Dimension(50, 50));
+        btnConfig.setVerticalTextPosition(SwingConstants.BOTTOM);
+        panelScreenMenus.add(btnConfig);
 
         panelHome.add(panelScreenMenus, "card2");
 
@@ -227,22 +243,23 @@ public class MainScreen extends javax.swing.JFrame {
 
         getContentPane().add(panelMainContent);
 
-        pack();
+        setSize(new Dimension(1296, 728));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnSideAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSideAddActionPerformed
+    private void btnSideAddActionPerformed(ActionEvent evt) {//GEN-FIRST:event_btnSideAddActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnSideAddActionPerformed
 
-    private void btnSideRemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSideRemoveActionPerformed
+    private void btnSideRemoveActionPerformed(ActionEvent evt) {//GEN-FIRST:event_btnSideRemoveActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnSideRemoveActionPerformed
 
-    private void btnSideConfigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSideConfigActionPerformed
+    private void btnSideConfigActionPerformed(ActionEvent evt) {//GEN-FIRST:event_btnSideConfigActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnSideConfigActionPerformed
 
-    private void btnRelatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRelatorioActionPerformed
+    private void btnRelatorioActionPerformed(ActionEvent evt) {//GEN-FIRST:event_btnRelatorioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnRelatorioActionPerformed
 
@@ -257,44 +274,39 @@ public class MainScreen extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MainScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MainScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MainScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(MainScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        
+        //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new MainScreen().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new MainScreen().setVisible(true);
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnMovimentacao;
-    private javax.swing.JButton btnRelatorio;
-    private javax.swing.JButton btnSideAdd;
-    private javax.swing.JButton btnSideConfig;
-    private javax.swing.JButton btnSideHome;
-    private javax.swing.JButton btnSideRemove;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JLabel labelBalance;
-    private javax.swing.JLabel labelTitle;
-    private javax.swing.JPanel panelHome;
-    private javax.swing.JPanel panelMainContent;
-    private javax.swing.JPanel panelScreenMenus;
-    private javax.swing.JPanel panelSideMenu;
-    private javax.swing.JPanel topDisplay;
+    JButton btnConfig;
+    JButton btnMovimentacao;
+    JButton btnRelatorio;
+    JButton btnSideAdd;
+    JButton btnSideConfig;
+    static JButton btnSideHome;
+    JButton btnSideRemove;
+    JLabel labelBalance;
+    JLabel labelTitle;
+    JPanel panelHome;
+    JPanel panelMainContent;
+    JPanel panelScreenMenus;
+    JPanel panelSideMenu;
+    JPanel topDisplay;
     // End of variables declaration//GEN-END:variables
 }
+
